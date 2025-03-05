@@ -34,13 +34,18 @@ const starbucks = [
 ];
 
 // 1. starbucks 할인 10% 전체
-const totalSale = starbucks.map((x) => x.price * 0.9);
+const totalSale = starbucks.map((x) => {
+  x.price = x.price * 0.9;
+  return x;
+});
+
 console.log(totalSale);
 
 // 2. 라떼 파티, 이름에 라떼가 들어가면 샷을 하나 더 추가해서 콘솔 나타내기
-const latteParty = starbucks.map((x) =>
-  x.name.includes("라떼") ? x.shots + 1 : x.shots
-);
+const latteParty = starbucks.map((x) => {
+  x.shots = x.name.includes("라떼") ? x.shots + 1 : x.shots;
+  return x;
+});
 
 console.log(latteParty);
 
