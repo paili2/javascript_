@@ -5,7 +5,6 @@
 // 빨강, 주황, 노랑, 초록, 파랑, 남, 보라 // 내용과 글씨색이 일치
 
 const user = +prompt("버튼 횟수");
-
 const colorList = [
   { name: "빨강", color: "red" },
   { name: "주황", color: "orange" },

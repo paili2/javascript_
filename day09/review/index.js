@@ -21,5 +21,8 @@ const solution1 = (num_list) =>
     ? num_list.reduce((a, c) => a + c)
     : num_list.reduce((a, c) => a * c);
 
+num1 = [3, 4, 5, 2, 5, 4, 6, 7, 3, 7, 2, 2, 1];
+num2 = [2, 3, 4, 5];
+
 console.log(solution1(num1));
 console.log(solution1(num2));

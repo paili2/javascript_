@@ -1,6 +1,5 @@
 // 랜덤한 배경색상을 가진 버튼을 10개 만들기
 // 컨텐츠는 버튼
-
 const color = [..."1234567890abcdef"];
 const getRandom = (min, max) => {
   return Math.floor(Math.random() * (max - min + 1) + min);
