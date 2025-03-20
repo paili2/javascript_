@@ -1,13 +1,14 @@
 const makeCard = (colorName, hexColor) => {
-  return `<article class="card">
-		<div style="background-color: ${hexColor}" class="color"></div>
-		<div class="info">
-			<span class="name">${colorName}</span>
-			<span class="hex">${hexColor}</span>
-		</div>
-	</article>`;
+  return `
+    <article class="card apple banana kiwi">
+      <div style="background-color:${hexColor}" class="color"></div>
+      <div class="info">
+        <span class="name">${colorName}</span>
+        <span class="hex">${hexColor}</span>
+      </div>
+    </article>
+    `;
 };
-
 const colorList = [
   { name: "Cool Grey 90", color: "#1e2c35" },
   { name: "Cool Grey 80", color: "#37434C" },
@@ -20,7 +21,6 @@ const colorList = [
   { name: "Cool Grey 10", color: "#E6E7E9" },
   { name: "Cool Grey 5", color: "#F2F4F6" },
 ];
-
 colorList.forEach((x) => {
   document.body.insertAdjacentHTML("beforeend", makeCard(x.name, x.color));
 });

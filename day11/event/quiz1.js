@@ -1,84 +1,53 @@
-// 9개의 버튼이 있음
+const box = document.createElement("div");
+box.style.border = "1px solid black";
+document.body.appendChild(box);
 
-// box 높이와 넓이
-// small, medium, large
-// wh: 100, wh:200, wh:300
+const sizeBtnList = [
+  { name: "small", size: "100px" },
+  { name: "medium", size: "200px" },
+  { name: "large", size: "300px" },
+];
+sizeBtnList.forEach((x) => {
+  const btn = document.createElement("button");
+  btn.innerText = x.name;
+  btn.addEventListener("click", () => {
+    box.style.width = x.size;
+    box.style.height = x.size;
+  });
+  document.body.appendChild(btn);
+});
 
-// 배경색상 바꾸기
-// red, blue, green
+const colorBtnList = [
+  { name: "red", color: "red" },
+  { name: "blue", color: "blue" },
+  { name: "green", color: "green" },
+];
+colorBtnList.forEach((x) => {
+  const btn = document.createElement("button");
+  btn.innerText = x.name;
+  btn.addEventListener("click", () => {
+    box.style.backgroundColor = x.color;
+  });
+  document.body.appendChild(btn);
+});
 
 // box 모서리 둥근정도
-// square, ellipse, circle
-// 0px, 10px, 9999px
-
-const box = document.createElement("div");
-document.body.appendChild(box);
-// box.style.width = "10px";
-// box.style.height = "10px";
-// box.style.backgroundColor = "grey";
-
-const smallBtn = document.createElement("button");
-smallBtn.innerText = "스몰버튼";
-smallBtn.addEventListener("click", () => {
-  box.style.width = "100px";
-  box.style.height = "100px";
+//square, ellipse, circle
+//0px,  10px, 9999px
+const radiusBtnList = [
+  { name: "square", radius: "0px" },
+  { name: "ellipse", radius: "10px" },
+  { name: "circle", radius: "9999px" },
+];
+radiusBtnList.forEach((x) => {
+  const btn = document.createElement("button");
+  btn.innerText = x.name;
+  btn.addEventListener("click", () => {
+    box.style.borderRadius = x.radius;
+  });
+  document.body.appendChild(btn);
 });
-document.body.appendChild(smallBtn);
 
-const mediumBtn = document.createElement("button");
-mediumBtn.innerText = "미디움버튼";
-mediumBtn.addEventListener("click", () => {
-  box.style.width = "200px";
-  box.style.height = "200px";
+window.addEventListener("scroll", () => {
+  console.log("스크롤~");
 });
-document.body.appendChild(mediumBtn);
-
-const largeBtn = document.createElement("button");
-largeBtn.innerText = "라지버튼";
-largeBtn.addEventListener("click", () => {
-  box.style.width = "300px";
-  box.style.height = "300px";
-});
-document.body.appendChild(largeBtn);
-
-const redBtn = document.createElement("button");
-redBtn.innerText = "레드버튼";
-redBtn.addEventListener("click", () => {
-  box.style.backgroundColor = "red";
-});
-document.body.appendChild(redBtn);
-
-const blueBtn = document.createElement("button");
-blueBtn.innerText = "블루버튼";
-blueBtn.addEventListener("click", () => {
-  box.style.backgroundColor = "blue";
-});
-document.body.appendChild(blueBtn);
-
-const yellBtn = document.createElement("button");
-yellBtn.innerText = "옐로버튼";
-yellBtn.addEventListener("click", () => {
-  box.style.backgroundColor = "yellow";
-});
-document.body.appendChild(yellBtn);
-
-const squareBtn = document.createElement("button");
-squareBtn.innerText = "스퀘어버튼";
-squareBtn.addEventListener("click", () => {
-  box.style.borderRadius = "0px";
-});
-document.body.appendChild(squareBtn);
-
-const ellipseBtn = document.createElement("button");
-ellipseBtn.innerText = "타원형버튼";
-ellipseBtn.addEventListener("click", () => {
-  box.style.borderRadius = "10px";
-});
-document.body.appendChild(ellipseBtn);
-
-const circleBtn = document.createElement("button");
-circleBtn.innerText = "서클버튼";
-circleBtn.addEventListener("click", () => {
-  box.style.borderRadius = "9999px";
-});
-document.body.appendChild(circleBtn);

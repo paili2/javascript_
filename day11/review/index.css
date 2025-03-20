@@ -1,3 +1,6 @@
+* {
+  box-sizing: border-box;
+}
 body {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
@@ -12,11 +15,9 @@ body {
   display: flex;
   flex-direction: column;
 }
-
 .color {
   flex: 1;
 }
-
 .info {
   flex: 1;
   display: flex;
