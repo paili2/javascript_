@@ -1,27 +1,18 @@
-// 1.유저에게 프롬프트로 두 숫자를 입력 받고 두 숫자의 합, 차, 곱, 제곱, 나누기에서 정수화 하는 거 까지 콘솔로 나타내기
+const first = +window.prompt("첫 번째 숫자 입력");
+const second = +window.prompt("두 번째 숫자 입력");
+window.console.log(`
+    합:${first + second} 
+    차:${first - second}
+    곱:${first * second}
+    제곱:${first ** second}
+    나누기 후 내림: ${parseInt(first / second)}
+`);
 
-const num1 = +window.prompt("첫 번째 숫자 입력ㄱㄱ");
-const num2 = +window.prompt("두 번째 숫자 입력ㄱㄱ");
+const num = +window.prompt("숫자 입력");
+const answer2 = num % 2 ? "홀수" : "짝수";
+window.console.log(`${num}은 ${answer2}`);
 
-const sum = parseInt(num1 + num2);
-const minus = parseInt(num1 - num2);
-const subtraction = parseInt(num1 * num2);
-const square = parseInt(num1 ** num2);
-const divide = parseInt(num1 / num2);
-
-window.console.log(
-  `합: ${sum}, 차: ${minus}, 곱:${subtraction}, 제곱:${square}, 나눗셈:${divide}}`
-);
-
-// 2. 유저에게 프롬프트로 하나의 숫자를 입력 받고 홀수 또는 짝수인지 콘솔로 알려주기
-
-const num3 = +window.prompt(`숫자 하나 입력하셈`);
-const result = num3 % 2 == 0 ? "짝수" : "홀수";
-window.console.log(`입력숫자 ${num3}(은)는 ${result}임`);
-
-// 3. 유저에게 프롬프트로 양의 정수를 입력받고 분:초 형태로 나타내기
-const num4 = +window.prompt("양의 정수 입력 ㄱㄱ");
-const minute = parseInt(num4 / 60);
-const second = parseInt(num4 % 60);
-
-window.console.log(`${minute}분 ${second}초`);
+const time = +window.prompt("숫자 입력");
+const minute = parseInt(time / 60);
+const seconds = time % 60;
+window.console.log(`${minute}분 ${seconds}초`);
